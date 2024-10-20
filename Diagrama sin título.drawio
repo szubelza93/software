@@ -1339,7 +1339,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="APokP6V---5xdrEDDsBR-166" value="detalle_compra" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="730" y="1070" width="220" height="227" as="geometry" />
+          <mxGeometry x="730" y="1070" width="220" height="197" as="geometry" />
         </mxCell>
         <mxCell id="APokP6V---5xdrEDDsBR-167" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" vertex="1" parent="APokP6V---5xdrEDDsBR-166">
           <mxGeometry y="30" width="220" height="39" as="geometry" />
@@ -1388,7 +1388,7 @@
             <mxRectangle width="60" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="APokP6V---5xdrEDDsBR-178" value="fecha : fecha" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-176">
+        <mxCell id="APokP6V---5xdrEDDsBR-178" value="cantidad : total" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-176">
           <mxGeometry x="60" width="160" height="30" as="geometry">
             <mxRectangle width="160" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -1401,22 +1401,17 @@
             <mxRectangle width="60" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="APokP6V---5xdrEDDsBR-181" value="nro : int" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-179">
+        <mxCell id="APokP6V---5xdrEDDsBR-181" value="precio_unitario : float" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-179">
           <mxGeometry x="60" width="160" height="30" as="geometry">
             <mxRectangle width="160" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="APokP6V---5xdrEDDsBR-182" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;html=1;" vertex="1" parent="APokP6V---5xdrEDDsBR-166">
-          <mxGeometry y="197" width="220" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="APokP6V---5xdrEDDsBR-183" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-182">
-          <mxGeometry width="60" height="30" as="geometry">
-            <mxRectangle width="60" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="APokP6V---5xdrEDDsBR-184" value="total : float" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" vertex="1" parent="APokP6V---5xdrEDDsBR-182">
-          <mxGeometry x="60" width="160" height="30" as="geometry">
-            <mxRectangle width="160" height="30" as="alternateBounds" />
+        <mxCell id="APokP6V---5xdrEDDsBR-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="APokP6V---5xdrEDDsBR-147" target="APokP6V---5xdrEDDsBR-170">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="849.5" />
+              <mxPoint x="670" y="1158.5" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
