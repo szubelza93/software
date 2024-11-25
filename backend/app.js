@@ -11,9 +11,11 @@ app.use('/api/usuarios', require('./routes/usuario'));
 
 app.use('/api/especies', require('./routes/especie'));
 app.use('/api/razas', require('./routes/raza'));
-//app.use('/api/mascotas', require('./routes/mascota'));
+app.use('/api/mascotas', require('./routes/mascota'));
+
 //app.use('/api/historiasclinicas', require('./routes/historiaClinica'));
 //app.use('/api/consultas', require('./routes/consulta'));
+
 //app.use('/api/login', require('./routes/auth'));
 
 const PORT = process.env.PORT || 3000;
