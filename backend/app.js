@@ -5,7 +5,7 @@ app.use(express.json());
 //app.use('/api/especies', require('./routes/especie'));
 //app.use('/api/razas', require('./routes/raza'));
 app.use('/api/turnos', require('./routes/turno'));
-//app.use('/api/personas', require('./routes/persona'));
+app.use('/api/personas', require('./routes/persona'));
 //app.use('/api/clientes', require('./routes/cliente'));
 //app.use('/api/empleados', require('./routes/empleado'));
 //app.use('/api/usuarios', require('./routes/usuario'));
