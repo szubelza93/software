@@ -14,7 +14,7 @@ app.use('/api/razas', require('./routes/raza'));
 app.use('/api/mascotas', require('./routes/mascota'));
 
 app.use('/api/historiasclinicas', require('./routes/historiaClinica'));
-//app.use('/api/consultas', require('./routes/consulta'));
+app.use('/api/consultas', require('./routes/consulta'));
 
 //app.use('/api/login', require('./routes/auth'));
 
