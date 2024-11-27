@@ -3,3 +3,4 @@
 
 # Archivos de entorno
 .env
+/backend/config/config.json
