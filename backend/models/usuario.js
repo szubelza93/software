@@ -1,14 +1,12 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
+
 module.exports = (sequelize, DataTypes) => {
   class Usuario extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+
     static associate(models) {
 
       Usuario.belongsTo(models.Empleado, {
@@ -18,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }
   }
+
   Usuario.init({
     correo: DataTypes.STRING,
     password: DataTypes.STRING,
@@ -27,6 +26,13 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Usuario',
+    hooks: {
+      beforeCreate: async (usuario) => {
+        const salt = await bcrypt.genSalt(10);
+        usuario.password = await bcrypt.hash(usuario.password, salt);
+      }
+    }
+    
   });
   return Usuario;
 };

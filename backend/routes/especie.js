@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const EspecieController = require('../controllers/EspecieController');
 
-// const authMiddleware = require('../middlewares/authMiddleware');
-// router.use(authMiddleware);
+ const authMiddleware = require('../middlewares/authMiddleware');
+ router.use(authMiddleware);
 
 router.get('/', EspecieController.getEspecies);
 router.post('/', EspecieController.createEspecie);

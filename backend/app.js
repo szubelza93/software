@@ -19,7 +19,7 @@ app.use('/api/mascotas', require('./routes/mascota'));
 app.use('/api/historiasclinicas', require('./routes/historiaClinica'));
 app.use('/api/consultas', require('./routes/consulta'));
 
-//app.use('/api/login', require('./routes/auth'));
+app.use('/api/login', require('./routes/auth'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
