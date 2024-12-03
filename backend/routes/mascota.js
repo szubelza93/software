@@ -1,11 +1,9 @@
-// routes/mascotaRoutes.js
-
 const express = require('express');
 const router = express.Router();
 const mascotaController = require('../controllers/MascotaController');
 
-// const authMiddleware = require('../middlewares/authMiddleware');
-// router.use(authMiddleware);
+const authMiddleware = require('../middlewares/authMiddleware');
+router.use(authMiddleware);
 
 router.get('/', mascotaController.getMascotas);
 router.post('/', mascotaController.createMascota);
