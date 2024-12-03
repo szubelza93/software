@@ -2,7 +2,7 @@ const { Especie } = require('../models');
 
 exports.getEspecies = async (req, res) => {
   try {
-    const especies = await Especie.findAll();
+    const especies = await Especie.findAll({order: [['id', 'ASC']]});
     res.json(especies);
   } catch (error) {
     res.status(500).json({ error: error.message });

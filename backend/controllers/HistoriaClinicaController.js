@@ -6,7 +6,8 @@ const { HistoriaClinica, Mascota } = require('../models');
 const getHistoriasClinicas = async (req, res) => {
   try {
     const historiasClinicas = await HistoriaClinica.findAll({
-      include: [{ model: Mascota, as: 'mascota' }]
+      include: [{ model: Mascota, as: 'mascota' }],
+      order: [['id', 'ASC']]
     });
     res.json(historiasClinicas);
   } catch (error) {

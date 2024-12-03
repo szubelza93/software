@@ -2,7 +2,10 @@ const { Cliente, Persona } = require('../models');
 
 exports.getClientes = async (req, res) => {
   try {
-    const clientes = await Cliente.findAll({ include: [{ model: Persona, as: 'persona' }] });
+    const clientes = await Cliente.findAll({ 
+      include: [{ model: Persona, as: 'persona' }],
+      order: [['id', 'ASC']]
+     });
     res.json(clientes);
   } catch (error) {
     res.status(500).json({ error: error.message });

@@ -4,7 +4,8 @@ const { Usuario, Empleado } = require('../models');
 exports.getUsuarios = async (req, res) => {
   try {
     const usuarios = await Usuario.findAll({
-      include: [{ model: Empleado, as: 'empleado' }]
+      include: [{ model: Empleado, as: 'empleado' }],
+      order: [['id', 'ASC']]
     });
     res.json(usuarios);
   } catch (error) {

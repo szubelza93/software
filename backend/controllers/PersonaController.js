@@ -2,7 +2,7 @@ const { Persona } = require('../models');
 
 exports.getPersonas = async (req, res) => {
   try {
-    const personas = await Persona.findAll();
+    const personas = await Persona.findAll({order: [['id', 'ASC']]});
     res.json(personas);
   } catch (error) {
     res.status(500).json({ error: error.message });

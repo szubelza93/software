@@ -2,7 +2,8 @@ const { Raza, Especie } = require('../models');
 
 exports.getRazas = async (req, res) => {
   try {
-    const razas = await Raza.findAll({ include: [{ model: Especie, as: 'especie' }] });
+    const razas = await Raza.findAll({ include: [{ model: Especie, as: 'especie' }] ,
+    order: [['id', 'ASC']]});
     res.json(razas);
   } catch (error) {
     res.status(500).json({ error: error.message });

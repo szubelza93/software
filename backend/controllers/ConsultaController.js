@@ -8,8 +8,8 @@ const getConsultas = async (req, res) => {
     const consultas = await Consulta.findAll({
       include: [
         { model: HistoriaClinica, as: 'historiaClinica' },
-        { model: Empleado, as: 'empleado' }
-      ]
+        { model: Empleado, as: 'empleado' }],
+        order: [['id', 'ASC']]
     });
     res.json(consultas);
   } catch (error) {

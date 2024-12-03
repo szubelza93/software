@@ -5,7 +5,8 @@ exports.getEmpleados = async (req, res) => {
     const empleados = await Empleado.findAll({ include:[
                                                               { model: Persona, as: 'persona' },
                                                               { model: Turno, as: 'turno' }
-                                                             ]});
+                                                             ],
+                                                             order: [['id', 'ASC']]});
     res.json(empleados);
   } catch (error) {
     res.status(500).json({ error: error.message });

@@ -9,7 +9,8 @@ const getMascotas = async (req, res) => {
       include: [
         { model: Cliente, as: 'cliente' },
         { model: Raza, as: 'raza' }
-      ]
+      ],
+      order: [['id', 'ASC']]
     });
     res.json(mascotas);
   } catch (error) {

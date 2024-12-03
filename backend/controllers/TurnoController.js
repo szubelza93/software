@@ -2,7 +2,7 @@ const { Turno } = require('../models');
 
 exports.getTurnos = async (req, res) => {
   try {
-    const turnos = await Turno.findAll();
+    const turnos = await Turno.findAll({order: [['id', 'ASC']]});
     res.json(turnos);
   } catch (error) {
     res.status(500).json({ error: error.message });

@@ -1,4 +1,7 @@
 'use strict';
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 const {
   Model
 } = require('sequelize');
@@ -27,6 +30,26 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Usuario',
-  });
+  },
+  
+  );
+
+
+    // Método de instancia para generar un token JWT
+    Usuario.prototype.generateToken = function() {
+      const payload = {
+        id: this.id,
+        correo: this.correo,
+        estado: this.estado
+      };
+      
+      return jwt.sign(payload, 'clave_secreta_jwt', { expiresIn: '1h' }); // Cambia a una variable de entorno
+    };
+  
+    // Método de clase para verificar la contraseña
+    Usuario.prototype.validPassword = async function(password) {
+      return await bcrypt.compare(password, this.password);
+    };
+
   return Usuario;
 };
